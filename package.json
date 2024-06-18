@@ -1,0 +1,19 @@
+{
+  "name": "playwright-api-tests",
+  "version": "1.0.0",
+  "description": "Playwright API testing framework for Reqres.in",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },  
+  "author": "Tri Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2",
+    "allure-playwright": "^3.0.0-beta.3"
+  },
+  "dependencies": {
+    "playwright": "^1.44.1"
+  }
+}
