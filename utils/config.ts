@@ -7,6 +7,7 @@ interface EnvironmentConfig {
     };
     invalid: {
       email: string;
+      password: string;
     };
   };
 }
@@ -33,7 +34,8 @@ export const config: { [key: string]: EnvironmentConfig } = {
         password: 'cityslicka'
       },
       invalid: {
-        email: 'peter@klaven'
+        email: 'eve.holt@reqres.in',
+        password: 'wrongpassword'
       }
     }
   }

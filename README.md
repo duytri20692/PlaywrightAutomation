@@ -27,7 +27,7 @@ This repository contains an API testing framework using Playwright to test endpo
 1. Clone the repository:
 
 ```
-   git clone https://github.com/your-repo/playwright-api-testing.git
+   git clone https://github.com/duytri20692/PlaywrightAutomation
 ```
 2. Navigate to the API project:
 ```
@@ -99,22 +99,12 @@ Reports are automatically generated after running the tests. The results will be
 
 ## Generating Allure Reports
 To generate Allure reports, follow these steps:
-1. Run Tests:
-### Run Tests in Test Environment
-```
-   npx playwright test --config=playwright.config.ts --project=test
-```
-#### Run Tests in Stage Environment
-```
-   npx playwright test --config=playwright.config.ts --project=stage
-```
-
-2. Generate Allure Report:
+1. Generate Allure Report:
 ```
    allure generate ./allure-results --clean
 ```
 
-3. Open Allure Report:
+2. Open Allure Report:
 ```
    allure open
 ```
