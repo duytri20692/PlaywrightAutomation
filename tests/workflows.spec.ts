@@ -1,9 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { getEnvConfig } from '../utils/envConfig';
 
+// 2. c: Add 2 End2End/Workflow test 
 test.describe('End-to-End Workflow Tests', () => {
   test('Successfully log in, retrieve user details, update the user, and then delete the user', async ({ request, baseURL }) => {
-    // Successful login
+    // 3.a: Test for Successful login (OK)
     const envConfig = getEnvConfig();
 
     const loginResponse = await request.post(`${baseURL}/login`, {
@@ -16,6 +17,7 @@ test.describe('End-to-End Workflow Tests', () => {
     const loginResponseBody = await loginResponse.json();
     expect(loginResponseBody).toHaveProperty('token');
 
+    // 3.b: Organise for the login test to be run against the successful Login endpoint 
     // Retrieve the user's details
     const userId = 2;
     const userResponse = await request.get(`${baseURL}/users/${userId}`, {
@@ -45,7 +47,7 @@ test.describe('End-to-End Workflow Tests', () => {
   test('Fail to log in, attempt to retrieve user details (should fail), and handle unauthorized responses', async ({ request, baseURL }) => {
     const envConfig = getEnvConfig();
 
-    // Unsuccessful login
+    // 3.a: Test for Unsuccessful login (BadRequest)
     const loginResponse = await request.post(`${baseURL}/login`, {
       data: {
         email: envConfig.credentials.invalid.email
@@ -55,6 +57,7 @@ test.describe('End-to-End Workflow Tests', () => {
     const loginResponseBody = await loginResponse.json();
     expect(loginResponseBody).toHaveProperty('error', 'Missing password');
 
+    // 3.b: Organise for the login test to be run against the unsuccessful Login endpoint 
     // Attempt to retrieve user details without authorization
     const userId = 2;
     const userResponse = await request.get(`${baseURL}/users/${userId}`);

@@ -12,6 +12,7 @@ interface EnvironmentConfig {
   };
 }
 
+// 2. d:  Tests should run on different environments (Test/Stage).  
 export const config: { [key: string]: EnvironmentConfig } = {
   test: {
     baseURL: 'https://reqres.in/api',
