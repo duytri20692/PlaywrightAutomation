@@ -25,13 +25,12 @@ This repository contains an API testing framework using Playwright to test endpo
 ### Installation
 
 1. Clone the repository:
-
 ```
    git clone https://github.com/duytri20692/PlaywrightAutomation
 ```
 2. Navigate to the API project:
 ```
-   cd playwright-api-testing
+   cd PlaywrightAutomation
 ```
 3. Install the dependencies:
 ```
@@ -70,17 +69,17 @@ The configuration is managed in the `utils/config.js` file. You can set up diffe
 
 2. GET - User Endpoint (/api/users/{id}) :
 - Positive Case: Retrieve details of a valid user.
-- Negative Case: Attempt to retrieve details of a non-existent user.
+- Negative Case: Attempt to retrieve details of a non-existing user.
 - Negative Case: Attempt to retrieve details without authentication.
 
 3. PUT - User Endpoint (/api/users/{id}):
 - Positive Case: Update details of a valid user.
-- Negative Case: Attempt to update details of a non-existent user.
-- Negative Case: Attempt to update details with incomplete data.
+- Negative Case: Attempt to update details of a non-existing user.
+- Negative Case: Attempt to update details without authentication.
 
 4. DELETE User Endpoint (/api/users/{id}):
 - Positive Case: Successfully delete a user.
-- Negative Case: Attempt to delete a non-existent user.
+- Negative Case: Attempt to delete a non-existing user.
 - Negative Case: Attempt to delete without authentication
 
 ### End-to-End/Workflow Tests
