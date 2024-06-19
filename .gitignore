@@ -1,24 +1,10 @@
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-
 # Node modules
 node_modules/
-
-# Logs
-*.log
+test-results/
 
 # Playwright reports
 playwright-report/
-allure-report/
 
 # Allure results
-allure-results
-
-# Miscellaneous
-.DS_Store
-.idea/
-.vscode/
-*.swp
+allure-results/
+allure-report/
