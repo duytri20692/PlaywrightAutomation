@@ -8,7 +8,6 @@ test.beforeAll(async ({ request }) => {
 });
 
 test.describe('GET User Endpoint Tests', () => {
-
   test('Retrieve valid user', async ({ request, baseURL }) => {
     const response = await request.get(`${baseURL}/users/2`, {
       headers: { Authorization: `Bearer ${token}` }

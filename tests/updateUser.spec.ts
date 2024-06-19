@@ -8,7 +8,6 @@ test.beforeAll(async ({ request }) => {
 });
 
 test.describe('UPDATE User Endpoint Tests', () => {
-
   test('Update Existing User', async ({ request, baseURL }) => {
     const response = await request.put(`${baseURL}/users/2`, {
       headers: { Authorization: `Bearer ${token}` },

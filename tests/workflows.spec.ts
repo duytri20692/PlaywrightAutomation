@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 import { getEnvConfig } from '../utils/envConfig';
 
 test.describe('End-to-End Workflow Tests', () => {
-
   test('Successfully log in, retrieve user details, update the user, and then delete the user', async ({ request, baseURL }) => {
     // Successful login
     const envConfig = getEnvConfig();
